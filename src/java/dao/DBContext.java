@@ -17,22 +17,30 @@ import java.util.logging.Logger;
  */
 public class DBContext {
     protected Connection connection;
-    public DBContext()
-    {
-        //@Students: You are allowed to edit user, pass, url variables to fit 
-        //your system configuration
-        //You can also add more methods for Database Interaction tasks. 
-        //But we recommend you to do it in another class
-        // For example : StudentDBContext extends DBContext , 
-        //where StudentDBContext is located in dal package, 
+
+    /**
+     * get an connection
+     *
+     * @return connection or null
+     * @throws ClassNotFoundException
+     */
+    public Connection getConnection() {
         try {
-            String user = "sa";
-            String pass = "123";
-            String url = "jdbc:sqlserver://localhost\\SQLEXPRESS:1433;databaseName=PRJ301_TEST5";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            connection = DriverManager.getConnection(url, user, pass);
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=CatStore";
+            String user = "sa";
+            String password = "123";
+            connection = DriverManager.getConnection(url, user, password);
+            return connection;
+        } catch (SQLException | ClassNotFoundException e) {
+            System.err.println("Error " + e.getMessage() + " at DBContext");
+            return null;
         }
+    }
+
+    public static void main(String[] args) {
+        DBContext test = new DBContext();
+        test.connection = test.getConnection();
+        System.out.println(test.connection);
     }
 }

@@ -25,23 +25,23 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li><a href="product-details.html">Book<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="product-details.html">Food<i class="fa fa-angle-down"></i></a>
                                         <div class="mega-menu">
                                             <span>
-                                                <a href="#" class="title">Jackets</a>
-                                                <a href="shop.html">Tops & Tees</a>
-                                                <a href="shop.html">Polo Short Sleeve</a>
-                                                <a href="shop.html">Graphic T-Shirts</a>
-                                                <a href="shop.html">Jackets & Coats</a>
-                                                <a href="shop.html">Fashion Jackets</a>
+                                                <a href="#" class="title">Paste</a>
+                                                <a href="shop.html">Wiskas</a>
+                                                <a href="shop.html">Shizuka</a>
+                                                <a href="shop.html">Gimcat</a>
+                                                <a href="shop.html">Wanpy</a>
+                                                <a href="shop.html">Catchy</a>
                                             </span>
                                             <span>
-                                                <a href="#" class="title">weaters</a>
-                                                <a href="shop.html">Crochet</a>
-                                                <a href="shop.html">Sleeveless</a>
-                                                <a href="shop.html">Stripes</a>
-                                                <a href="shop.html">Sweaters</a>
-                                                <a href="shop.html">hoodies</a>
+                                                <a href="#" class="title">Toy</a>
+                                                <a href="shop.html">Animals</a>
+                                                <a href="shop.html">Ball</a>
+                                                <a href="shop.html">Scratching table</a>
+                                                <a href="shop.html">Stick</a>
+                                                <a href="shop.html">HiPiDog</a>
                                             </span>
                                             <span>
                                                 <a href="#" class="title">Bottoms</a>
@@ -61,14 +61,15 @@
                                             </span>
                                         </div>
                                     </li>
-                                    <li><a href="product-details.html">Audio books<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="product-details.html">Entertainment items<i class="fa fa-angle-down"></i></a>
                                         <div class="mega-menu">
                                             <span>
-                                                <a href="#" class="title">Shirts</a>
-                                                <a href="shop.html">Tops & Tees</a>
-                                                <a href="shop.html">Sweaters </a>
-                                                <a href="shop.html">Hoodies</a>
-                                                <a href="shop.html">Jackets & Coats</a>
+                                                <a href="#" class="title">Toy</a>
+                                                <a href="shop.html">Animals</a>
+                                                <a href="shop.html">Ball</a>
+                                                <a href="shop.html">Scratching table</a>
+                                                <a href="shop.html">Stick</a>
+                                                <a href="shop.html">HiPiDog</a>
                                             </span>
                                             <span>
                                                 <a href="#" class="title">Tops & Tees</a>
@@ -93,7 +94,7 @@
                                             </span>
                                         </div>
                                     </li>
-                                    <li><a href="product-details.html">children’s books<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="product-details.html">House<i class="fa fa-angle-down"></i></a>
                                         <div class="mega-menu mega-menu-2">
                                             <span>
                                                 <a href="#" class="title">Tops</a>
