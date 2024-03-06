@@ -1,21 +1,20 @@
-package dao;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package dao;
 
 /**
  *
- * @author FPT University - PRJ301
+ * @author PC
  */
+
+
+import java.sql.*;
+
+
 public class DBContext {
+
     protected Connection connection;
 
     /**
@@ -27,7 +26,7 @@ public class DBContext {
     public Connection getConnection() {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String url = "jdbc:sqlserver://localhost:1433;databaseName=CatStore";
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=CatShop";
             String user = "sa";
             String password = "123";
             connection = DriverManager.getConnection(url, user, password);

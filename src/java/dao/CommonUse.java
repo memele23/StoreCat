@@ -17,8 +17,9 @@ import java.util.Map;
 /**
  *
  * @author PC
+ * @param <T>
  */
-public abstract class CommonUse<T> extends DBContext     {
+public abstract class CommonUse<T> extends DBContext   {
     protected PreparedStatement statement;
     protected ResultSet resultSet;
     protected Map<String, Object> parameterMap;
@@ -66,7 +67,7 @@ public abstract class CommonUse<T> extends DBContext     {
                 | NoSuchMethodException
                 | InvocationTargetException
                 | SQLException e) {
-            System.err.println("4USER: Bắn Exception ở hàm query: " + e.getMessage());
+            System.err.println("erro: " + e.getMessage());
         } finally {
             try {
                 // Đóng kết nối và các tài nguyên

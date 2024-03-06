@@ -36,20 +36,20 @@
                                                 <a href="shop.html">Catchy</a>
                                             </span>
                                             <span>
-                                                <a href="#" class="title">Toy</a>
-                                                <a href="shop.html">Animals</a>
-                                                <a href="shop.html">Ball</a>
-                                                <a href="shop.html">Scratching table</a>
-                                                <a href="shop.html">Stick</a>
-                                                <a href="shop.html">HiPiDog</a>
+                                                <a href="#" class="title">Seed</a>
+                                                <a href="shop.html">Chicken seed</a>
+                                                <a href="shop.html">Cow seed</a>
+                                                <a href="shop.html"></a>
+                                                <a href="shop.html"></a>
+                                                <a href="shop.html"></a>
                                             </span>
                                             <span>
-                                                <a href="#" class="title">Bottoms</a>
-                                                <a href="shop.html">Heeled sandals</a>
-                                                <a href="shop.html">Polo Short Sleeve</a>
-                                                <a href="shop.html">Flat sandals</a>
-                                                <a href="shop.html">Short Sleeve</a>
-                                                <a href="shop.html">Long Sleeve</a>
+                                                <a href="#" class="title"></a>
+                                                <a href="shop.html"></a>
+                                                <a href="shop.html"></a>
+                                                <a href="shop.html"></a>
+                                                <a href="shop.html"></a>
+                                                <a href="shop.html"></a>
                                             </span>
                                             <span>
                                                 <a href="#" class="title">Jeans Pants</a>

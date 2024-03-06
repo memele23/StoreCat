@@ -16,12 +16,20 @@ public class CategoryDAO extends CommonUse<Category>{
 
     @Override
     public List<Category> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return queryGenericDAO(Category.class);
     }
 
     @Override
     public int insert(Category t) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    public static void main(String[] args) {
+        CategoryDAO daoCate = new CategoryDAO();
+        List<Category> list = daoCate.findAll();
+        for (Category category : list) {
+            System.out.println(category);
+        }
     }
     
 }
