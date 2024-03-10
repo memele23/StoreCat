@@ -25,10 +25,10 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li><a href="product-details.html">Food<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="product-details.html">Paste<i class="fa fa-angle-down"></i></a>
                                         <div class="mega-menu">
                                             <span>
-                                                <a href="#" class="title">Paste</a>
+                                                <a href="#" class="title">Paste box</a>
                                                 <a href="shop.html">Wiskas</a>
                                                 <a href="shop.html">Shizuka</a>
                                                 <a href="shop.html">Gimcat</a>
@@ -36,28 +36,12 @@
                                                 <a href="shop.html">Catchy</a>
                                             </span>
                                             <span>
-                                                <a href="#" class="title">Seed</a>
-                                                <a href="shop.html">Chicken seed</a>
-                                                <a href="shop.html">Cow seed</a>
-                                                <a href="shop.html"></a>
-                                                <a href="shop.html"></a>
-                                                <a href="shop.html"></a>
-                                            </span>
-                                            <span>
-                                                <a href="#" class="title"></a>
-                                                <a href="shop.html"></a>
-                                                <a href="shop.html"></a>
-                                                <a href="shop.html"></a>
-                                                <a href="shop.html"></a>
-                                                <a href="shop.html"></a>
-                                            </span>
-                                            <span>
-                                                <a href="#" class="title">Jeans Pants</a>
-                                                <a href="shop.html">Polo Short Sleeve</a>
-                                                <a href="shop.html">Sleeveless</a>
-                                                <a href="shop.html">Graphic T-Shirts</a>
-                                                <a href="shop.html">Hoodies</a>
-                                                <a href="shop.html">Jackets</a>
+                                                <a href="#" class="title">Paste package</a>
+                                                <a href="shop.html">Shizuka</a>
+                                                <a href="shop.html">Bite of wild</a>
+                                                <a href="shop.html">Giao wang</a>
+                                                <a href="shop.html">Wanpy</a>
+                                                <a href="shop.html">Mix</a>
                                             </span>
                                         </div>
                                     </li>
@@ -72,59 +56,50 @@
                                                 <a href="shop.html">HiPiDog</a>
                                             </span>
                                             <span>
-                                                <a href="#" class="title">Tops & Tees</a>
-                                                <a href="shop.html">Long Sleeve </a>
-                                                <a href="shop.html">Short Sleeve</a>
-                                                <a href="shop.html">Polo Short Sleeve</a>
-                                                <a href="shop.html">Sleeveless</a>
-                                            </span>
-                                            <span>
-                                                <a href="#" class="title">Jackets</a>
-                                                <a href="shop.html">Sweaters</a>
-                                                <a href="shop.html">Hoodies</a>
-                                                <a href="shop.html">Wedges</a>
-                                                <a href="shop.html">Vests</a>
-                                            </span>
-                                            <span>
-                                                <a href="#" class="title">Jeans Pants</a>
-                                                <a href="shop.html">Polo Short Sleeve</a>
-                                                <a href="shop.html">Sleeveless</a>
-                                                <a href="shop.html">Graphic T-Shirts</a>
-                                                <a href="shop.html">Hoodies</a>
+                                                <a href="#" class="title">Play</a>
+                                                <a href="shop.html">Rod</a>
+                                                <a href="shop.html">House scratching</a>
+                                                <a href="shop.html">Mouse</a>
+                                                <a href="shop.html">Fish</a>
                                             </span>
                                         </div>
                                     </li>
-                                    <li><a href="product-details.html">House<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="product-details.html">Seed<i class="fa fa-angle-down"></i></a>
                                         <div class="mega-menu mega-menu-2">
                                             <span>
-                                                <a href="#" class="title">Tops</a>
-                                                <a href="shop.html">Shirts</a>
-                                                <a href="shop.html">Florals</a>
-                                                <a href="shop.html">Crochet</a>
-                                                <a href="shop.html">Stripes</a>
+                                                <a href="#" class="title">Cat seed</a>
+                                                <a href="shop.html">Cat's rang</a>
+                                                <a href="shop.html">Nutri plan</a>
+                                                <a href="shop.html">Nabiran</a>
+                                                <a href="shop.html">Yumi</a>
                                             </span>
                                             <span>
-                                                <a href="#" class="title">Bottoms</a>
-                                                <a href="shop.html">Shorts</a>
-                                                <a href="shop.html">Dresses</a>
-                                                <a href="shop.html">Trousers</a>
-                                                <a href="shop.html">Jeans</a>
+                                                <a href="#" class="title">Kitty seed</a>
+                                                <a href="shop.html">Wikas</a>
+                                                <a href="shop.html">Bite of wild</a>
+                                                <a href="shop.html">Seed sc</a>
+                                                <a href="shop.html">Mrvet</a>
                                             </span>
-                                            <span>
-                                                <a href="#" class="title">Shoes</a>
-                                                <a href="shop.html">Heeled sandals</a>
-                                                <a href="shop.html">Flat sandals</a>
-                                                <a href="shop.html">Wedges</a>
-                                                <a href="shop.html">Ankle boots</a>
-                                            </span>
+                                            
                                         </div>
                                     </li>
-                                    <li><a href="#">blog<i class="fa fa-angle-down"></i></a>
-                                        <div class="sub-menu sub-menu-2">
-                                            <ul>
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="blog-details.html">blog-details</a></li>
-                                            </ul>
+                                    <li><a href="product-details.html">Clothes<i class="fa fa-angle-down"></i></a>
+                                        <div class="mega-menu mega-menu-2">
+                                            <span>
+                                                <a href="#" class="title">Male cat</a>
+                                                <a href="shop.html">YuanZhsPet</a>
+                                                <a href="shop.html">T-shirt</a>
+                                                <a href="shop.html">Lna</a>
+                                                <a href="shop.html">Jl man</a>
+                                            </span>
+                                            <span>
+                                                <a href="#" class="title">female cat</a>
+                                                <a href="shop.html">Dorikey</a>
+                                                <a href="shop.html">Layer</a>
+                                                <a href="shop.html">Animal clothes</a>
+                                                <a href="shop.html">Flared skirt</a>
+                                            </span>
+                                            
                                         </div>
                                     </li>
                                     <li><a href="#">pages<i class="fa fa-angle-down"></i></a>

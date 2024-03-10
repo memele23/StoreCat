@@ -53,19 +53,19 @@
 
             <!-- header-top-area-end -->
             <!-- header-mid-area-start -->
-            <jsp:include page="common/header-top-area.jsp"></jsp:include>
+            <jsp:include page="user/common/header-top-area.jsp"></jsp:include>
                 <!-- header-mid-area-end -->
-            <jsp:include page="common/header-mid-area.jsp"></jsp:include>
+            <jsp:include page="user/common/header-mid-area.jsp"></jsp:include>
                 <!-- main-menu-area-start -->
-            <jsp:include page="common/main-menu-area.jsp"></jsp:include>
+            <jsp:include page="user/common/main-menu-area.jsp"></jsp:include>
                 <!-- main-menu-area-end -->
                 <!-- mobile-menu-area-start -->
-            <jsp:include page="common/mobile-menu-area.jsp"></jsp:include>
+            <jsp:include page="user/common/mobile-menu-area.jsp"></jsp:include>
                 <!-- mobile-menu-area-end -->
             </header>
             <!-- header-area-end -->
             <!-- breadcrumbs-area-start -->
-        <jsp:include page="common/breadcrumbs-area.jsp"></jsp:include>
+        <jsp:include page="user/common/breadcrumbs-area.jsp"></jsp:include>
             <!-- breadcrumbs-area-end -->
             <!-- shop-main-area-start -->
             <div class="shop-main-area mb-70">
@@ -82,7 +82,7 @@
                                 <div class="left-menu mb-30">
                                     <ul>
                                     <c:forEach items="${listCategory}" var="cate">
-                                        <li><a href="#">${cate.name}<span>(15)</span></a></li>
+                                        <li><a href="HomeServlet?search=category&categoryId=${cate.id}">${cate.name}<span>(15)</span></a></li>
                                         </c:forEach>
                                 </ul>
                             </div>
@@ -102,13 +102,13 @@
                             </div>
                             <div class="left-menu mb-30">
                                 <ul>
-                                    <li><a href="#">Adidas<span>(4)</span></a></li>
-                                    <li><a href="#">Chanel<span>(7)</span></a></li>
-                                    <li><a href="#">DKNY <span>(3)</span></a></li>
-                                    <li><a href="#">Dolce<span>(3)</span></a></li>
-                                    <li><a href="#">Gabbana<span>(2)</span></a></li>
-                                    <li><a href="#">Nike<span>(3)</span></a></li>
-                                    <li><a href="#">Other <span>(1)</span></a></li>
+                                    <li><a href="#">Dorrikey<span>(4)</span></a></li>
+                                    <li><a href="#">Ted<span>(7)</span></a></li>
+                                    <li><a href="#">HiHiCat<span>(3)</span></a></li>
+                                    <li><a href="#">Nabirang<span>(3)</span></a></li>
+                                    <li><a href="#">Petvie<span>(2)</span></a></li>
+                                    <li><a href="#">Catchy<span>(3)</span></a></li>
+                                    <li><a href="#">Wikas<span>(1)</span></a></li>
                                 </ul>
                             </div>
                             <div class="left-title mb-20">
@@ -116,22 +116,22 @@
                             </div>
                             <div class="left-menu mb-30">
                                 <ul>
-                                    <li><a href="#">$0.00-$9.99<span>(1)</span></a></li>
-                                    <li><a href="#">$30.00-$39.99<span>(11)</span></a></li>
-                                    <li><a href="#">$40.00-$49.99<span>(2)</span></a></li>
-                                    <li><a href="#">$50.00-$59.99<span>(3)</span></a></li>
-                                    <li><a href="#">$70.00-and above<span>(1)</span></a></li>
+                                    <li><a href="#">$0-$99<span>(1)</span></a></li>
+                                    <li><a href="#">$99-$120<span>(11)</span></a></li>
+                                    <li><a href="#">$120-$200<span>(2)</span></a></li>
+                                    <li><a href="#">$200-$250<span>(3)</span></a></li>
+                                    <li><a href="#">$250-and above<span>(1)</span></a></li>
                                 </ul>
                             </div>
                             <div class="left-title mb-20">
-                                <h4>Random</h4>
+                                <h4>Hot Sale</h4>
                             </div>
                             <div class="random-area mb-30">
                                 <div class="product-active-2 owl-carousel">
                                     <div class="product-total-2">
                                         <div class="single-most-product bd mb-18">
                                             <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/20.jpg" alt="book" /></a>
+                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/30.jpg" alt="book" /></a>
                                             </div>
                                             <div class="most-product-content">
                                                 <div class="product-rating">
@@ -154,7 +154,7 @@
                                         </div>
                                         <div class="single-most-product bd mb-18">
                                             <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/21.jpg" alt="book" /></a>
+                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/36.jpg" alt="book" /></a>
                                             </div>
                                             <div class="most-product-content">
                                                 <div class="product-rating">
@@ -177,7 +177,7 @@
                                         </div>
                                         <div class="single-most-product">
                                             <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/22.jpg" alt="book" /></a>
+                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/38.jpg" alt="book" /></a>
                                             </div>
                                             <div class="most-product-content">
                                                 <div class="product-rating">
@@ -201,7 +201,7 @@
                                     <div class="product-total-2">
                                         <div class="single-most-product bd mb-18">
                                             <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/23.jpg" alt="book" /></a>
+                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/35.jpg" alt="book" /></a>
                                             </div>
                                             <div class="most-product-content">
                                                 <div class="product-rating">
@@ -224,7 +224,7 @@
                                         </div>
                                         <div class="single-most-product bd mb-18">
                                             <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/24.jpg" alt="book" /></a>
+                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/32.jpg" alt="book" /></a>
                                             </div>
                                             <div class="most-product-content">
                                                 <div class="product-rating">
@@ -247,7 +247,7 @@
                                         </div>
                                         <div class="single-most-product">
                                             <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/22.jpg" alt="book" /></a>
+                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/33.jpg" alt="book" /></a>
                                             </div>
                                             <div class="most-product-content">
                                                 <div class="product-rating">
@@ -272,16 +272,17 @@
                             </div>
                             <div class="banner-area mb-30">
                                 <div class="banner-img-2">
-                                    <a href="#"><img src="${pageContext.request.contextPath}/img/banner/31.jpg" alt="banner" /></a>
+                                    <a href="#"><img src="${pageContext.request.contextPath}/img/banner/41.png" alt="banner" /></a>
                                 </div>
                             </div>
                             <div class="left-title-2 mb-30">
-                                <h2>Compare Products</h2>
-                                <p>You have no items to compare.</p>
+                                <h2>Love Cat </h2>
+                                <p><span style="color: blue; font-style: italic;">One small cat changes coming home to an empty house to coming home </span> </p>
+
                             </div>
                             <div class="left-title-2">
-                                <h2>My Wish List</h2>
-                                <p>You have no items in your wish list.</p>
+                                <h2></h2>
+                                <p>Thank for all</p>
                             </div>
                         </div>
                     </div>
@@ -290,7 +291,7 @@
                             <a href="#"><img src="${pageContext.request.contextPath}/img/banner/anhbia.jpg" alt="banner" /></a>
                         </div>
                         <div class="section-title-5 mb-30">
-                            <h2>Book</h2>
+                            <h2>Cat Shop</h2>
                         </div>
                         <div class="toolbar mb-30">
                             <div class="shop-tab">
@@ -328,7 +329,7 @@
                                             <div class="product-wrapper mb-40">
                                                 <div class="product-img">
                                                     <a href="product-details?id=${p.id}">
-                                                        <img src="${pageContext.request.contextPath}/img/product/1.jpg" alt="book" class="primary" />
+                                                        <img src="${pageContext.request.contextPath}/img/product/37.jpg" alt="book" class="primary" />
                                                     </a>
                                                     <div class="quick-view">
                                                         <a class="action-view" href="#" data-bs-target="#productModal" data-bs-toggle="modal" title="Quick View">
@@ -386,7 +387,7 @@
     </div>
     <!-- shop-main-area-end -->
     <!-- footer-area-start -->
-    <jsp:include page="common/footer.jsp"></jsp:include>
+    <jsp:include page="user/common/footer.jsp"></jsp:include>
         <!-- footer-area-end -->
         <!-- Modal -->
         <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
