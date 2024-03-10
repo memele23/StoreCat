@@ -93,6 +93,12 @@ public class HomeServlet extends HttpServlet {
                 //find list of the product by catecoryid
                 listProduct = productDAO.findByCategory(categoryId);
                 break;
+            case "searchByName":
+                //get key word want to search
+                String keyword=request.getParameter("keyword");
+                //Find the product by name of the product
+                listProduct=productDAO.findByName(keyword);
+                break;
             default:
                 //if it is the defaul we will displays all list product.
                 listProduct = productDAO.findAll();

@@ -58,9 +58,19 @@ public class ProductDAO extends CommonUse<Product> {
         String sql = "select* \n"
                 + "from [Product]\n"
                 + "where categoryId=?";
-        parameterMap=new LinkedHashMap<>();
+        parameterMap = new LinkedHashMap<>();
         parameterMap.put("categoryId", categoryId);
         return queryGenericDAO(Product.class, sql, parameterMap);
+    }
+
+    public List<Product> findByName(String keyword) {
+        String sql = "select *\n"
+                + "from Product\n"
+                + "where name like ?";
+        parameterMap=new  LinkedHashMap<>();
+        parameterMap.put("name", "%"+keyword+"%");
+        return queryGenericDAO(Product.class, sql, parameterMap);
+        
     }
 
 }
