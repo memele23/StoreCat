@@ -65,7 +65,7 @@
             </header>
             <!-- header-area-end -->
             <!-- breadcrumbs-area-start -->
-           <jsp:include page="user/common/breadcrumbs-area.jsp"></jsp:include>
+        <jsp:include page="user/common/breadcrumbs-area.jsp"></jsp:include>
             <!-- breadcrumbs-area-end -->
             <!-- shop-main-area-start -->
             <div class="shop-main-area mb-70">
@@ -282,7 +282,7 @@
                             </div>
                             <div class="left-title-2">
                                 <h2></h2>
-                                <p>Thank for all</p>
+                                <img src="${pageContext.request.contextPath}/img/banner/thank.jpg" alt="banner" /></a>
                             </div>
                         </div>
                     </div>
@@ -319,7 +319,7 @@
                                 </div>
                             </div>
                         </div>
-                           <!-- tab-area-start -->
+                        <!-- tab-area-start -->
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="th">
                                 <div class="row">
@@ -364,133 +364,133 @@
                         </div>
 
 
-                    <!-- tab-area-end -->
-                    <!-- pagination-area-start -->
-                    <div class="pagination-area mt-50">
-                        <div class="list-page-2">
-                            <p>Items 1-9 of 11</p>
+                        <!-- tab-area-end -->
+                        <!-- pagination-area-start -->
+                        <div class="pagination-area mt-50">
+                            <div class="list-page-2">
+                                <p>Items 1-9 of 11</p>
+                            </div>
+                            <div class="page-number">
+                                <ul>
+                                    <c:forEach begin="1" end="${pageControl.totalPage}" var="pageNumber">
+                                        <!--<li><a href="#" class="active">1</a></li>-->
+                                        <a href="${pageControl.urlPattern}page=${pageNumber}">${pageNumber}</a>
+                                    </c:forEach>
+                                    <li><a href="#" class="angle"><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="page-number">
-                            <ul>
-                                <li><a href="#" class="active">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#" class="angle"><i class="fa fa-angle-right"></i></a></li>
-                            </ul>
-                        </div>
+                        <!-- pagination-area-end -->
                     </div>
-                    <!-- pagination-area-end -->
                 </div>
             </div>
         </div>
-    </div>
-    <!-- shop-main-area-end -->
-    <!-- footer-area-start -->
-    <jsp:include page="user/common/footer.jsp"></jsp:include>
-        <!-- footer-area-end -->
-        <!-- Modal -->
-        <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5 col-xs-12">
-                                <div class="modal-tab">
-                                    <div class="product-details-large tab-content">
-                                        <div class="tab-pane active" id="image-1">
-                                            <img src="${pageContext.request.contextPath}/img/product/quickview-l4.jpg" alt="" />
-                                    </div>
-                                    <div class="tab-pane" id="image-2">
-                                        <img src="${pageContext.request.contextPath}/img/product/quickview-l2.jpg" alt="" />
-                                    </div>
-                                    <div class="tab-pane" id="image-3">
-                                        <img src="${pageContext.request.contextPath}/img/product/quickview-l3.jpg" alt="" />
-                                    </div>
-                                    <div class="tab-pane" id="image-4">
-                                        <img src="${pageContext.request.contextPath}/img/product/quickview-l5.jpg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="product-details-small quickview-active owl-carousel">
-                                    <a class="active" href="#image-1"><img src="${pageContext.request.contextPath}/img/product/quickview-s4.jpg" alt="" /></a>
-                                    <a href="#image-2"><img src="${pageContext.request.contextPath}/img/product/quickview-s2.jpg" alt="" /></a>
-                                    <a href="#image-3"><img src="${pageContext.request.contextPath}/img/product/quickview-s3.jpg" alt="" /></a>
-                                    <a href="#image-4"><img src="${pageContext.request.contextPath}/img/product/quickview-s5.jpg" alt="" /></a>
-                                </div>
-                            </div>
+        <!-- shop-main-area-end -->
+        <!-- footer-area-start -->
+        <jsp:include page="user/common/footer.jsp"></jsp:include>
+            <!-- footer-area-end -->
+            <!-- Modal -->
+            <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
                         </div>
-                        <div class="col-md-7 col-sm-7 col-xs-12">
-                            <div class="modal-pro-content">
-                                <h3>Chaz Kangeroo Hoodie3</h3>
-                                <div class="price">
-                                    <span>$70.00</span>
-                                </div>
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
-                                <div class="quick-view-select">
-                                    <div class="select-option-part">
-                                        <label>Size*</label>
-                                        <select class="select">
-                                            <option value="">S</option>
-                                            <option value="">M</option>
-                                            <option value="">L</option>
-                                        </select>
-                                    </div>
-                                    <div class="quickview-color-wrap">
-                                        <label>Color*</label>
-                                        <div class="quickview-color">
-                                            <ul>
-                                                <li class="blue">b</li>
-                                                <li class="red">r</li>
-                                                <li class="pink">p</li>
-                                            </ul>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <div class="modal-tab">
+                                        <div class="product-details-large tab-content">
+                                            <div class="tab-pane active" id="image-1">
+                                                <img src="${pageContext.request.contextPath}/img/product/quickview-l4.jpg" alt="" />
+                                        </div>
+                                        <div class="tab-pane" id="image-2">
+                                            <img src="${pageContext.request.contextPath}/img/product/quickview-l2.jpg" alt="" />
+                                        </div>
+                                        <div class="tab-pane" id="image-3">
+                                            <img src="${pageContext.request.contextPath}/img/product/quickview-l3.jpg" alt="" />
+                                        </div>
+                                        <div class="tab-pane" id="image-4">
+                                            <img src="${pageContext.request.contextPath}/img/product/quickview-l5.jpg" alt="" />
                                         </div>
                                     </div>
+                                    <div class="product-details-small quickview-active owl-carousel">
+                                        <a class="active" href="#image-1"><img src="${pageContext.request.contextPath}/img/product/quickview-s4.jpg" alt="" /></a>
+                                        <a href="#image-2"><img src="${pageContext.request.contextPath}/img/product/quickview-s2.jpg" alt="" /></a>
+                                        <a href="#image-3"><img src="${pageContext.request.contextPath}/img/product/quickview-s3.jpg" alt="" /></a>
+                                        <a href="#image-4"><img src="${pageContext.request.contextPath}/img/product/quickview-s5.jpg" alt="" /></a>
+                                    </div>
                                 </div>
-                                <form action="#">
-                                    <input type="number" value="1" />
-                                    <button>Add to cart</button>
-                                </form>
-                                <span><i class="fa fa-check"></i> In stock</span>
+                            </div>
+                            <div class="col-md-7 col-sm-7 col-xs-12">
+                                <div class="modal-pro-content">
+                                    <h3>Chaz Kangeroo Hoodie3</h3>
+                                    <div class="price">
+                                        <span>$70.00</span>
+                                    </div>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                            <label>Size*</label>
+                                            <select class="select">
+                                                <option value="">S</option>
+                                                <option value="">M</option>
+                                                <option value="">L</option>
+                                            </select>
+                                        </div>
+                                        <div class="quickview-color-wrap">
+                                            <label>Color*</label>
+                                            <div class="quickview-color">
+                                                <ul>
+                                                    <li class="blue">b</li>
+                                                    <li class="red">r</li>
+                                                    <li class="pink">p</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form action="#">
+                                        <input type="number" value="1" />
+                                        <button>Add to cart</button>
+                                    </form>
+                                    <span><i class="fa fa-check"></i> In stock</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Modal end -->
-    <!-- all js here -->
-    <!-- jquery latest version -->
-    <script src="${pageContext.request.contextPath}/js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-    <!-- owl.carousel js -->
-    <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
-    <!-- meanmenu js -->
-    <script src="${pageContext.request.contextPath}/js/jquery.meanmenu.js"></script>
-    <!-- wow js -->
-    <script src="${pageContext.request.contextPath}/js/wow.min.js"></script>
-    <!-- jquery.parallax-1.1.3.js -->
-    <script src="${pageContext.request.contextPath}/js/jquery.parallax-1.1.3.js"></script>
-    <!-- jquery.countdown.min.js -->
-    <script src="${pageContext.request.contextPath}/js/jquery.countdown.min.js"></script>
-    <!-- jquery.flexslider.js -->
-    <script src="${pageContext.request.contextPath}/js/jquery.flexslider.js"></script>
-    <!-- chosen.jquery.min.js -->
-    <script src="${pageContext.request.contextPath}/js/chosen.jquery.min.js"></script>
-    <!-- jquery.counterup.min.js -->
-    <script src="${pageContext.request.contextPath}/js/jquery.counterup.min.js"></script>
-    <!-- waypoints.min.js -->
-    <script src="${pageContext.request.contextPath}/js/waypoints.min.js"></script>
-    <!-- plugins js -->
-    <script src="${pageContext.request.contextPath}/js/plugins.js"></script>
-    <!-- main js -->
-    <script src="${pageContext.request.contextPath}/js/main.js"></script>
-</body>
+        <!-- Modal end -->
+        <!-- all js here -->
+        <!-- jquery latest version -->
+        <script src="${pageContext.request.contextPath}/js/vendor/jquery-1.12.4.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+        <!-- owl.carousel js -->
+        <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
+        <!-- meanmenu js -->
+        <script src="${pageContext.request.contextPath}/js/jquery.meanmenu.js"></script>
+        <!-- wow js -->
+        <script src="${pageContext.request.contextPath}/js/wow.min.js"></script>
+        <!-- jquery.parallax-1.1.3.js -->
+        <script src="${pageContext.request.contextPath}/js/jquery.parallax-1.1.3.js"></script>
+        <!-- jquery.countdown.min.js -->
+        <script src="${pageContext.request.contextPath}/js/jquery.countdown.min.js"></script>
+        <!-- jquery.flexslider.js -->
+        <script src="${pageContext.request.contextPath}/js/jquery.flexslider.js"></script>
+        <!-- chosen.jquery.min.js -->
+        <script src="${pageContext.request.contextPath}/js/chosen.jquery.min.js"></script>
+        <!-- jquery.counterup.min.js -->
+        <script src="${pageContext.request.contextPath}/js/jquery.counterup.min.js"></script>
+        <!-- waypoints.min.js -->
+        <script src="${pageContext.request.contextPath}/js/waypoints.min.js"></script>
+        <!-- plugins js -->
+        <script src="${pageContext.request.contextPath}/js/plugins.js"></script>
+        <!-- main js -->
+        <script src="${pageContext.request.contextPath}/js/main.js"></script>
+    </body>
 
 
-<!-- Mirrored from htmldemo.net/koparion/koparion/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Feb 2024 17:30:52 GMT -->
+    <!-- Mirrored from htmldemo.net/koparion/koparion/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Feb 2024 17:30:52 GMT -->
 </html>

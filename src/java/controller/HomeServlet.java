@@ -4,9 +4,11 @@
  */
 package controller;
 
+import constant.CommonConst;
 import dao.implement.CategoryDAO;
 import dao.implement.ProductDAO;
 import entity.Category;
+import entity.PageControl;
 import entity.Product;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -57,13 +59,15 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        List<Product> listProduct = findProductDoGet(request);
+        PageControl pageControl = new PageControl();
+        List<Product> listProduct = findProductDoGet(request, pageControl);
         //get list the category dao
         List<Category> listCategory = categoryDAO.findAll();
         //set all in the session
         HttpSession session = request.getSession();
         session.setAttribute("listProduct", listProduct);
         session.setAttribute("listCategory", listCategory);
+        request.setAttribute("pageControl", pageControl);
         // change into home.jsp
         request.getRequestDispatcher("view/home.jsp").forward(request, response);
     }
@@ -79,30 +83,63 @@ public class HomeServlet extends HttpServlet {
         return "Short description";
     }
 
-    private List<Product> findProductDoGet(HttpServletRequest request) {
-        //get ve search
+    private List<Product> findProductDoGet(HttpServletRequest request, PageControl pagecontrol) {
+       //pagination
+       //get about page
+       String pageRaw=request.getParameter("page");
+       //valid page such as abc,100000000=>false
+       //use try cath to do it
+       int page;
+        try {
+            page=Integer.parseInt(pageRaw);
+            //check if the page <=0=> do not exist
+            //for all it if situation is page=1
+            if (page<=0) {
+                page=1;
+            }
+        } catch (Exception e) {
+            page=1;
+        }
+       
+        
+
+       //get ve search
         String actionSearch = request.getParameter("search") == null
                 ? "default"
                 : request.getParameter("search");
         //get about the list of product dao
         List<Product> listProduct;
+        //get ve request URL
+        String requestURL=request.getRequestURL().toString();
+        //total record
+        int totalRecord=0;
         switch (actionSearch) {
             case "category":
-                //first is get about categoryid
                 String categoryId = request.getParameter("categoryId");
-                //find list of the product by catecoryid
-                listProduct = productDAO.findByCategory(categoryId);
+                totalRecord = productDAO.findTotalRecordByCategory(categoryId);
+                listProduct = productDAO.findByCategory(categoryId, page);
+                pagecontrol.setUrlPattern(requestURL + "?search=category&categoryId=" + categoryId + "&");
                 break;
             case "searchByName":
-                //get key word want to search
-                String keyword=request.getParameter("keyword");
-                //Find the product by name of the product
-                listProduct=productDAO.findByName(keyword);
+                String keyword = request.getParameter("keyword");
+                totalRecord = productDAO.findTotalRecordByName(keyword);
+                listProduct = productDAO.findByName(keyword, page);
+                pagecontrol.setUrlPattern(requestURL + "?search=searchByName&keyword=" + keyword + "&");
                 break;
             default:
-                //if it is the defaul we will displays all list product.
-                listProduct = productDAO.findAll();
+                totalRecord = productDAO.findTotalRecord();
+                listProduct = productDAO.findByPage(page);
+                pagecontrol.setUrlPattern(requestURL + "?");
         }
+        
+        //total page
+        int totalPage=(totalRecord% CommonConst.RECORD_PER_PAGE)==0
+                ?(totalRecord / CommonConst.RECORD_PER_PAGE)
+                :(totalRecord / CommonConst.RECORD_PER_PAGE)+1;
+        //set the total record,total page,page in pageControl
+        pagecontrol.setPage(page);
+        pagecontrol.setTotalPage(totalPage);
+        pagecontrol.setTotalRecord(totalRecord);
         return listProduct;
     }
 }
