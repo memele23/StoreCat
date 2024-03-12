@@ -24,7 +24,7 @@ public class ProductDAO extends CommonUse<Product> {
 
     @Override
     public int insert(Product t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+      return insertGenericDAO(t);
     }
 
     public static void main(String[] args) {
@@ -117,4 +117,35 @@ public class ProductDAO extends CommonUse<Product> {
         return queryGenericDAO(Product.class, sql, parameterMap);
 
     }
-}
+
+    
+
+    public void deleteById(int id) {
+         String sql = "DELETE FROM [dbo].[Product]\n"
+                + "      WHERE [id] = ?";
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("id", id);
+        deleteGenericDAO(sql, parameterMap);
+    }
+
+    public void update(Product product) {
+        String sql = "UPDATE [dbo].[Product]\n"
+                + "   SET [name] = ?\n"
+                + "      ,[image] = ?\n"
+                + "      ,[quantity] = ?\n"
+                + "      ,[price] = ?\n"
+                + "      ,[description] = ?\n"
+                + "      ,[categoryId] = ?\n"
+                + " WHERE id = ?";
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("name", product.getName());
+        parameterMap.put("image", product.getImage());
+        parameterMap.put("quantity", product.getQuantity());
+        parameterMap.put("price", product.getPrice());
+        parameterMap.put("description", product.getDescription());
+        parameterMap.put("categoryId", product.getCategoryId());
+        parameterMap.put("id", product.getId());
+        updateGenericDAO(sql, parameterMap);
+    }
+    }
+

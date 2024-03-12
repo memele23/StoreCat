@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package controller;
+package controller.homepage;
 
 import constant.CommonConst;
 import dao.implement.CategoryDAO;
@@ -65,8 +65,8 @@ public class HomeServlet extends HttpServlet {
         List<Category> listCategory = categoryDAO.findAll();
         //set all in the session
         HttpSession session = request.getSession();
-        session.setAttribute("listProduct", listProduct);
-        session.setAttribute("listCategory", listCategory);
+        session.setAttribute(CommonConst.SESSION_PRODUCT, listProduct);
+        session.setAttribute(CommonConst.SESSION_CATEGORY, listCategory);
         request.setAttribute("pageControl", pageControl);
         // change into home.jsp
         request.getRequestDispatcher("view/home.jsp").forward(request, response);

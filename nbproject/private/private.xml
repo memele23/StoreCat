@@ -5,11 +5,13 @@
         <group name="MERGE">
             <file>file:/C:/Users/PC/Downloads/give/Cat/web/view/user/common/header-mid-area.jsp</file>
             <file>file:/C:/Users/PC/Downloads/give/Cat/src/java/dao/implement/ProductDAO.java</file>
+            <file>file:/C:/Users/PC/Downloads/give/Cat/src/java/controller/homepage/HomeServlet.java</file>
+            <file>file:/C:/Users/PC/Downloads/give/Cat/web/view/admin/dashboard.jsp</file>
             <file>file:/C:/Users/PC/Downloads/give/Cat/web/view/user/common/header-top-area.jsp</file>
             <file>file:/C:/Users/PC/Downloads/give/Cat/web/view/home.jsp</file>
             <file>file:/C:/Users/PC/Downloads/give/Cat/src/java/entity/PageControl.java</file>
-            <file>file:/C:/Users/PC/Downloads/give/Cat/src/java/controller/HomeServlet.java</file>
             <file>file:/C:/Users/PC/Downloads/give/Cat/web/view/user/common/main-menu-area.jsp</file>
+            <file>file:/C:/Users/PC/Downloads/give/Cat/src/java/controller/admin/DashboardServlet.java</file>
             <file>file:/C:/Users/PC/Downloads/give/Cat/src/java/constant/CommonConst.java</file>
             <file>file:/C:/Users/PC/Downloads/give/Cat/src/java/dao/DBContext.java</file>
         </group>

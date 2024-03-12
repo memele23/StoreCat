@@ -1,6 +1,4 @@
-<%-- 
-    Author     : 4USER-FPT
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
