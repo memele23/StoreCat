@@ -23,11 +23,9 @@ import lombok.ToString;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Account {
+public class Role {
     private int id;
-    private String username;
-    private String password;
-    private String email;
-    private String address;
-    private int roleId;
+    private String name;
+    
+    
 }

@@ -5,7 +5,29 @@
 --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
- <div class="header-top-area">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Header Top Area</title>
+    <style>
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none; /* Removes underline from links */
+            transition: background-color 0.3s ease-in-out;
+            background-color: #ff9900; /* Cam cho tất cả các nút */
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+<div class="header-top-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12">
@@ -36,12 +58,33 @@
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="account-area text-end">
                     <ul>
-                        <li><a href="my-account.html">My Account</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="login.html">Sign in</a></li>
+                        <c:if test="${account !=null}">
+                            <li>
+                                <a href="my-account.html" class="btn">My Account</a>
+                            </li> 
+                            <li>
+                                <a href="checkout.html" class="btn">Checkout</a>
+                            </li>
+                        </c:if>
+
+                        <c:if test="${account == null}">
+                            <li>
+                                <a href="authen?action=login" class="btn">Sign in</a>
+                            </li>
+                            <li>
+                                <a href="authen?action=sign-up" class="btn">Sign up</a>
+                            </li>
+                        </c:if>
+                        <c:if test="${account != null}">
+                            <li>
+                                <a href="authen?action=log-out" class="btn">Sign Out</a>
+                            </li>
+                        </c:if>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</body>
+</html>

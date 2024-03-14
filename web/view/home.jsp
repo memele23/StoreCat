@@ -53,19 +53,19 @@
 
             <!-- header-top-area-end -->
             <!-- header-mid-area-start -->
-            <jsp:include page="user/common/header-top-area.jsp"></jsp:include>
+            <jsp:include page="../view/user/common/header-top-area.jsp"></jsp:include>
                 <!-- header-mid-area-end -->
-            <jsp:include page="user/common/header-mid-area.jsp"></jsp:include>
+            <jsp:include page="../view/user/common/header-mid-area.jsp"></jsp:include>
                 <!-- main-menu-area-start -->
-            <jsp:include page="user/common/main-menu-area.jsp"></jsp:include>
+            <jsp:include page="../view/user/common/main-menu-area.jsp"></jsp:include>
                 <!-- main-menu-area-end -->
                 <!-- mobile-menu-area-start -->
-            <jsp:include page="user/common/mobile-menu-area.jsp"></jsp:include>
+            <jsp:include page="../view/user/common/mobile-menu-area.jsp"></jsp:include>
                 <!-- mobile-menu-area-end -->
             </header>
             <!-- header-area-end -->
             <!-- breadcrumbs-area-start -->
-        <jsp:include page="user/common/breadcrumbs-area.jsp"></jsp:include>
+        <jsp:include page="../view/user/common/breadcrumbs-area.jsp"></jsp:include>
             <!-- breadcrumbs-area-end -->
             <!-- shop-main-area-start -->
             <div class="shop-main-area mb-70">
@@ -387,7 +387,7 @@
         </div>
         <!-- shop-main-area-end -->
         <!-- footer-area-start -->
-        <jsp:include page="user/common/footer.jsp"></jsp:include>
+        <jsp:include page="../view/user/common/footer.jsp"></jsp:include>
             <!-- footer-area-end -->
             <!-- Modal -->
             <div class="modal fade" id="productModal" tabindex="-1" role="dialog">

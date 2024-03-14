@@ -9,21 +9,21 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="delete-modal-label">Xác nhận xoá</h5>
+                <h5 class="modal-title" id="delete-modal-label">Confirm deletion</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <p>Bạn có chắc chắn muốn xoá sản phẩm này không?</p>
+                <p>Are you sure you want to delete this product?</p>
             </div>
             <div class="modal-footer">
                 <form action="product?action=delete" method="POST">
                     <div class="form-group" style="display: none">
                         <input type="text" class="form-control" id="idDeleteInput" name="id" value="">
                     </div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
-                    <button type="submit" class="btn btn-danger">Có</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="submit" class="btn btn-danger">Yes</button>
                 </form>
             </div>
         </div>

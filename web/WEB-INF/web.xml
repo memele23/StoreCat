@@ -10,7 +10,11 @@
     </servlet>
     <servlet>
         <servlet-name>ProductAdminServlet</servlet-name>
-        <servlet-class>ProductAdminServlet</servlet-class>
+        <servlet-class>controller.admin.ProductAdminServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthenticationController</servlet-name>
+        <servlet-class>authen.AuthenticationController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ProductDetailsController</servlet-name>
@@ -26,6 +30,10 @@
     <servlet-mapping>
         <servlet-name>ProductAdminServlet</servlet-name>
         <url-pattern>/admin/product</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthenticationController</servlet-name>
+        <url-pattern>/authen</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

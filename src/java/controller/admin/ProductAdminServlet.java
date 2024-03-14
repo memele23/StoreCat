@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-
+package controller.admin;
 
 import dao.implement.CategoryDAO;
 import dao.implement.ProductDAO;
@@ -16,15 +16,12 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.Part;
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-/**
- *
- * @author PC
- */
+
 @MultipartConfig
 public class ProductAdminServlet extends HttpServlet {
-
     ProductDAO pdao = new ProductDAO();
     CategoryDAO cateDAO = new CategoryDAO();
 
