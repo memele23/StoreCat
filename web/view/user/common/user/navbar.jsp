@@ -1,6 +1,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<nav class="navbar navbar-expand navbar-dark bg-info static-top">
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
     <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
 
@@ -14,10 +14,9 @@
             <input type="text" class="form-control" placeholder="Search for..." aria-label="Search"
                    aria-describedby="basic-addon2">
             <div class="input-group-append">
-                <button class="btn btn-secondary" type="button"> <!-- hoặc sử dụng btn-dark -->
+                <button class="btn btn-primary" type="button">
                     <i class="fas fa-search"></i>
                 </button>
-
             </div>
         </div>
     </form>
@@ -28,9 +27,8 @@
             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
-                <span class="badge badge-primary">9+</span> <!-- Sử dụng badge-primary cho màu xanh đậm -->
+                <span class="badge badge-danger">9+</span>
             </a>
-
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
