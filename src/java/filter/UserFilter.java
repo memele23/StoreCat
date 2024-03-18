@@ -25,7 +25,7 @@ import jakarta.servlet.http.HttpSession;
  *
  * @author PC
  */
-public class AdminFilter implements Filter {
+public class UserFilter implements Filter {
 
     private static final boolean debug = true;
 
@@ -33,14 +33,14 @@ public class AdminFilter implements Filter {
     // this value is null, this filter instance is not currently
     // configured. 
     private FilterConfig filterConfig = null;
-
-    public AdminFilter() {
-    }
-
+    
+    public UserFilter() {
+    }    
+    
     private void doBeforeProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
         if (debug) {
-            log("AdminFilter:DoBeforeProcessing");
+            log("UserFilter:DoBeforeProcessing");
         }
 
         // Write code here to process the request and/or response before
@@ -63,12 +63,12 @@ public class AdminFilter implements Filter {
 	    log(buf.toString());
 	}
          */
-    }
-
+    }    
+    
     private void doAfterProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
         if (debug) {
-            log("AdminFilter:DoAfterProcessing");
+            log("UserFilter:DoAfterProcessing");
         }
 
         // Write code here to process the request and/or response after
@@ -102,9 +102,9 @@ public class AdminFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
             throws IOException, ServletException {
-
+        
         if (debug) {
-            log("AdminFilter:doFilter()");
+            log("UserFilter:doFilter()");
         }
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
@@ -118,14 +118,14 @@ public class AdminFilter implements Filter {
         } else {
             //da dang nhap roi
             //kiem tra xem quyen cua account
-            if (account.getRoleId() != 1) {
+            if (account.getRoleId() != 2) {
                 resp.sendRedirect(req.getContextPath() + "/authen?action=login");
                 return;
             }
         }
-
+        
         doBeforeProcessing(request, response);
-
+        
         Throwable problem = null;
         try {
             chain.doFilter(request, response);
@@ -136,7 +136,7 @@ public class AdminFilter implements Filter {
             problem = t;
             t.printStackTrace();
         }
-
+        
         doAfterProcessing(request, response);
 
         // If there was a problem, we want to rethrow it if it is
@@ -171,17 +171,17 @@ public class AdminFilter implements Filter {
     /**
      * Destroy method for this filter
      */
-    public void destroy() {
+    public void destroy() {        
     }
 
     /**
      * Init method for this filter
      */
-    public void init(FilterConfig filterConfig) {
+    public void init(FilterConfig filterConfig) {        
         this.filterConfig = filterConfig;
         if (filterConfig != null) {
-            if (debug) {
-                log("AdminFilter:Initializing filter");
+            if (debug) {                
+                log("UserFilter:Initializing filter");
             }
         }
     }
@@ -192,27 +192,27 @@ public class AdminFilter implements Filter {
     @Override
     public String toString() {
         if (filterConfig == null) {
-            return ("AdminFilter()");
+            return ("UserFilter()");
         }
-        StringBuffer sb = new StringBuffer("AdminFilter(");
+        StringBuffer sb = new StringBuffer("UserFilter(");
         sb.append(filterConfig);
         sb.append(")");
         return (sb.toString());
     }
-
+    
     private void sendProcessingError(Throwable t, ServletResponse response) {
-        String stackTrace = getStackTrace(t);
-
+        String stackTrace = getStackTrace(t);        
+        
         if (stackTrace != null && !stackTrace.equals("")) {
             try {
                 response.setContentType("text/html");
                 PrintStream ps = new PrintStream(response.getOutputStream());
-                PrintWriter pw = new PrintWriter(ps);
+                PrintWriter pw = new PrintWriter(ps);                
                 pw.print("<html>\n<head>\n<title>Error</title>\n</head>\n<body>\n"); //NOI18N
 
                 // PENDING! Localize this for next official release
-                pw.print("<h1>The resource did not process correctly</h1>\n<pre>\n");
-                pw.print(stackTrace);
+                pw.print("<h1>The resource did not process correctly</h1>\n<pre>\n");                
+                pw.print(stackTrace);                
                 pw.print("</pre></body>\n</html>"); //NOI18N
                 pw.close();
                 ps.close();
@@ -229,7 +229,7 @@ public class AdminFilter implements Filter {
             }
         }
     }
-
+    
     public static String getStackTrace(Throwable t) {
         String stackTrace = null;
         try {
@@ -243,8 +243,9 @@ public class AdminFilter implements Filter {
         }
         return stackTrace;
     }
-
+    
     public void log(String msg) {
-        filterConfig.getServletContext().log(msg);
+        filterConfig.getServletContext().log(msg);        
     }
+    
 }

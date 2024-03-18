@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Cat Shop</title>
+        <title>Koparion – Book Shop HTML5 Template</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -41,33 +41,33 @@
         <!-- Add your site or application content here -->
         <header>
             <!-- header-top-area-start -->
-            <jsp:include page="user/common/header-top-area.jsp"></jsp:include>
+            <jsp:include page="../view/user/common/header-top-area.jsp"></jsp:include>
                 <!-- header-top-area-end -->
                 <!-- header-mid-area-start -->
-            <jsp:include page="user/common/header-mid-area.jsp"></jsp:include>
+            <jsp:include page="../view/user/common/header-mid-area.jsp"></jsp:include>
                 <!-- header-mid-area-end -->
                 <!-- main-menu-area-start -->
-            <jsp:include page="user/common/main-menu-area.jsp"></jsp:include>
+            <jsp:include page="../view/user/common/main-menu-area.jsp"></jsp:include>
                 <!-- main-menu-area-end -->
                 <!-- mobile-menu-area-start -->
-            <jsp:include page="user/common/mobile-menu-area.jsp"></jsp:include>
+            <jsp:include page="../view/user/common/mobile-menu-area.jsp"></jsp:include>
                 <!-- mobile-menu-area-end -->
-            </header>
+        </header>
             <!-- breadcrumbs-area-start -->
-        <jsp:include page="user/common/breadcrumbs-area.jsp"></jsp:include>
+            <jsp:include page="../view/user/common/breadcrumbs-area.jsp"></jsp:include>
             <!-- breadcrumbs-area-end -->
-            <!-- product-main-area-start -->
-            <div class="product-main-area mb-70">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-12 col-12 order-lg-1 order-1">
-                            <!-- product-main-area-start -->
-                            <div class="product-main-area">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-6 col-12">
-                                        <div class="flexslider">
-                                            <ul class="slides">
-                                                <li data-thumb="${pageContext.request.contextPath}/img/thum-2/1.jpg">
+        <!-- product-main-area-start -->
+        <div class="product-main-area mb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-12 order-lg-1 order-1">
+                        <!-- product-main-area-start -->
+                        <div class="product-main-area">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6 col-12">
+                                    <div class="flexslider">
+                                        <ul class="slides">
+                                            <li data-thumb="${pageContext.request.contextPath}/img/thum-2/1.jpg">
                                                 <img src="${pageContext.request.contextPath}/img/flex/1.jpg" alt="woman" />
                                             </li>
                                         </ul>
@@ -93,11 +93,12 @@
                                             </div>
                                         </div>
                                         <div class="product-add-form">
-                                            <form action="#">
+                                            <form action="payment?action=add-product" method="POST">
+                                                <input type="hidden" name="id" value="${product.id}"/>
                                                 <div class="quality-button">
-                                                    <input class="qty" type="number" value="1">
+                                                    <input class="qty" type="number" name="quantity" value="1">
                                                 </div>
-                                                <a href="#">Add to cart</a>
+                                                <a href="#" onclick="return this.closest('form').submit();">Add to cart</a>
                                             </form>
                                         </div>
                                         <div class="product-social-links">
@@ -502,22 +503,22 @@
         </div>
         <!-- product-main-area-end -->
         <!-- footer-area-start -->
-        <jsp:include page="user/common/footer.jsp"></jsp:include>
-            <!-- footer-area-end -->
-            <!-- Modal -->
-            <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-md-5 col-sm-5 col-xs-12">
-                                    <div class="modal-tab">
-                                        <div class="product-details-large tab-content">
-                                            <div class="tab-pane active" id="image-1">
-                                                <img src="${pageContext.request.contextPath}/img/product/quickview-l4.jpg" alt="" />
+        <jsp:include page="../view/user/common/footer.jsp"></jsp:include>
+        <!-- footer-area-end -->
+        <!-- Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                <div class="modal-tab">
+                                    <div class="product-details-large tab-content">
+                                        <div class="tab-pane active" id="image-1">
+                                            <img src="${pageContext.request.contextPath}/img/product/quickview-l4.jpg" alt="" />
                                         </div>
                                         <div class="tab-pane" id="image-2">
                                             <img src="${pageContext.request.contextPath}/img/product/quickview-l2.jpg" alt="" />

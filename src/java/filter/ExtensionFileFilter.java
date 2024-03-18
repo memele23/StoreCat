@@ -15,7 +15,6 @@ import jakarta.servlet.FilterConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
-import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -23,9 +22,8 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author PC
  */
-@WebFilter(filterName="ExtensionFileFilter", urlPatterns={"/*"})
 public class ExtensionFileFilter implements Filter {
-    
+
     private static final boolean debug = true;
 
     // The filter configuration object we are associated with.  If
